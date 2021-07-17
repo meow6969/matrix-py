@@ -94,6 +94,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+unix-venv
 
 # Spyder project settings
 .spyderproject
@@ -112,3 +113,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/inspectionProfiles/profiles_settings.xml
+*.xml
+*.iml
+unix-venv/bin/activate
+unix-venv/bin/activate.csh
+unix-venv/bin/activate.fish
+unix-venv/bin/Activate.ps1
+unix-venv/bin/pip3
+unix-venv/bin/pip3.9
+unix-venv/bin/pip
+tests/credentials.json
+.idea

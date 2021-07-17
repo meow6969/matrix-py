@@ -1,0 +1,1 @@
+this folder has stuff for testing the image command and stuff its just random things i found on computer
