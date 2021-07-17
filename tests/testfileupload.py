@@ -3,18 +3,11 @@ import os
 from nio import AsyncClient, MatrixRoom, RoomMessageText
 import matrix
 import json
+import can
 
 
 async def gamer(client):
-    content = {
-        "body": 'starting test',
-        "msgtype": 'm.text'
-    }
-    await client.room_send(
-        "!VgklaNdKhnLIVsWfwr:matrix.org",
-        message_type="m.room.message",
-        content=content
-    )
+    await matrix.message(client, "!VgklaNdKhnLIVsWfwr:matrix.org", 'startng test')
 
     for i in os.listdir('./teststuff'):
         print(i)
@@ -44,4 +37,9 @@ async def main() -> None:
     await client.sync_forever(timeout=30000)  # milliseconds
 
 
-asyncio.get_event_loop().run_until_complete(main())
+listener = can.Listener()
+try:
+    listener.on_message_received(asyncio.get_event_loop().run_until_complete(main()))
+except KeyboardInterrupt:
+    pass
+

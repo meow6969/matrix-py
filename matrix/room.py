@@ -1,3 +1,3 @@
-class room():
+class room:
     def __init__(self):
         pass
